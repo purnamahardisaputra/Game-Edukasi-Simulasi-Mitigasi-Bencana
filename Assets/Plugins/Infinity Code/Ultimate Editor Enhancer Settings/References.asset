@@ -611,18 +611,30 @@ MonoBehaviour:
     rootOnly: 0
     recursive: 1
   _sceneHistory:
+  - name: Demo_Scene
+    path: Assets/Scenes/Demo_Scene.unity
+  - name: Demo
+    path: Assets/Package/Simpligon Universe/Scene/Demo.unity
+  - name: Demo Day
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Day.unity
+  - name: Demo Blend
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Blend.unity
+  - name: Demo
+    path: Assets/IgniteCoders/Simple Water Shader/Demo.unity
+  - name: MainScene
+    path: Assets/Scenes/MainScene.unity
+  - name: DemoScene
+    path: Assets/Package/SyntyStudios/PolygonKnights/Demo/DemoScene.unity
+  - name: Demo_Scene
+    path: Assets/Package/SyntyStudios/PolygonAdventure/DemoScene/Demo_Scene.unity
   - name: DemoScene
     path: Assets/RainMaker/Demo/DemoScene.unity
+  - name: DemoSceneSimple3D
+    path: Assets/RainMaker/Demo/DemoSceneSimple3D.unity
   - name: DemoSceneSimple
     path: Assets/RainMaker/Demo/DemoSceneSimple.unity
   - name: DemoScene2D
     path: Assets/RainMaker/Demo/DemoScene2D.unity
-  - name: DemoSceneSimple3D
-    path: Assets/RainMaker/Demo/DemoSceneSimple3D.unity
-  - name: Demo_Scene
-    path: Assets/Package/SyntyStudios/PolygonAdventure/DemoScene/Demo_Scene.unity
   - name: mainScene
     path: Assets/Skybox/Scene/mainScene.unity
-  - name: DemoScene
-    path: Assets/Package/SyntyStudios/PolygonKnights/Demo/DemoScene.unity
   _notes: []
