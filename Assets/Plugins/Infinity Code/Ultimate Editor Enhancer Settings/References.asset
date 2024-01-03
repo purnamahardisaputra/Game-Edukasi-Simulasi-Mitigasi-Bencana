@@ -611,6 +611,8 @@ MonoBehaviour:
     rootOnly: 0
     recursive: 1
   _sceneHistory:
+  - name: CharacterPlayground
+    path: Assets/KinematicCharacterController/Examples/Scenes/CharacterPlayground.unity
   - name: Demo_Scene
     path: Assets/Scenes/Demo_Scene.unity
   - name: Demo
