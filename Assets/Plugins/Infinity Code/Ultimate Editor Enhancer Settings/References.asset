@@ -611,32 +611,47 @@ MonoBehaviour:
     rootOnly: 0
     recursive: 1
   _sceneHistory:
-  - name: CharacterPlayground
-    path: Assets/KinematicCharacterController/Examples/Scenes/CharacterPlayground.unity
+  - name: Scene_DepthOfField
+    path: Assets/Beautify/URP/Demo/Scene_DepthOfField.unity
+  - name: Scene_LUTBlending
+    path: Assets/Beautify/URP/Demo/Scene_LUTBlending.unity
+  - name: Scene
+    path: Assets/Beautify/URP/Demo/Scene.unity
   - name: Demo_Scene
     path: Assets/Scenes/Demo_Scene.unity
-  - name: Demo
-    path: Assets/Package/Simpligon Universe/Scene/Demo.unity
-  - name: Demo Day
-    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Day.unity
-  - name: Demo Blend
-    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Blend.unity
-  - name: Demo
-    path: Assets/IgniteCoders/Simple Water Shader/Demo.unity
   - name: MainScene
     path: Assets/Scenes/MainScene.unity
-  - name: DemoScene
-    path: Assets/Package/SyntyStudios/PolygonKnights/Demo/DemoScene.unity
-  - name: Demo_Scene
-    path: Assets/Package/SyntyStudios/PolygonAdventure/DemoScene/Demo_Scene.unity
-  - name: DemoScene
-    path: Assets/RainMaker/Demo/DemoScene.unity
-  - name: DemoSceneSimple3D
-    path: Assets/RainMaker/Demo/DemoSceneSimple3D.unity
-  - name: DemoSceneSimple
-    path: Assets/RainMaker/Demo/DemoSceneSimple.unity
-  - name: DemoScene2D
-    path: Assets/RainMaker/Demo/DemoScene2D.unity
-  - name: mainScene
-    path: Assets/Skybox/Scene/mainScene.unity
+  - name: MusemiDemoScene
+    path: Assets/OccaSoftware/Musemi - Spring Ambient VFX/DemoResources/Scenes/MusemiDemoScene.unity
+  - name: StylizedNatureLite_Overview
+    path: Assets/JC_StylizedNature_Lite/Scenes/StylizedNatureLite_Overview.unity
+  - name: StylizedNatureLite_Demo
+    path: Assets/JC_StylizedNature_Lite/Scenes/StylizedNatureLite_Demo.unity
+  - name: Demo - Grass
+    path: Assets/StylizedGrass/Demo/Demo - Grass.unity
+  - name: DEMO
+    path: Assets/AQUAS-Lite/Demo/DEMO.unity
+  - name: WalkthroughScene5
+    path: Assets/Package/KinematicCharacterController/Walkthrough/5- Adding velocities
+      and impulses/Scene/WalkthroughScene5.unity
+  - name: WalkthroughScene2
+    path: Assets/Package/KinematicCharacterController/Walkthrough/2- Basic Movement
+      and Gravity/Scene/WalkthroughScene2.unity
+  - name: WalkthroughScene8
+    path: Assets/Package/KinematicCharacterController/Walkthrough/8- Creating a moving
+      platform/Scene/WalkthroughScene8.unity
+  - name: StressTest
+    path: Assets/Package/KinematicCharacterController/Examples/Scenes/StressTest.unity
+  - name: WalkthroughScene7
+    path: Assets/Package/KinematicCharacterController/Walkthrough/7- Orienting towards
+      arbitrary up direction/Scene/WalkthroughScene7.unity
+  - name: WalkthroughScene15
+    path: Assets/Package/KinematicCharacterController/Walkthrough/15- Root motion
+      example/Scene/WalkthroughScene15.unity
+  - name: WalkthroughScene13
+    path: Assets/Package/KinematicCharacterController/Walkthrough/13- Swimming state/Scene/WalkthroughScene13.unity
+  - name: CharacterPlayground
+    path: Assets/Package/KinematicCharacterController/Examples/Scenes/CharacterPlayground.unity
+  - name: WalkthroughScene6
+    path: Assets/Package/KinematicCharacterController/Walkthrough/6- Crouching/Scene/WalkthroughScene6.unity
   _notes: []
