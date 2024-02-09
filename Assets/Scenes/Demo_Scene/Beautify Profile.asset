@@ -158,7 +158,7 @@ MonoBehaviour:
     m_Value: 0
   sharpenIntensity:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 5
   sharpenDepthThreshold:
     m_OverrideState: 0
     m_Value: 0.035
@@ -172,13 +172,13 @@ MonoBehaviour:
     m_Value: 0
   sharpenRelaxation:
     m_OverrideState: 0
-    m_Value: 0.08
+    m_Value: 0.095
   sharpenClamp:
     m_OverrideState: 0
     m_Value: 0.45
   sharpenMotionSensibility:
     m_OverrideState: 0
-    m_Value: 0.5
+    m_Value: 1
   sharpenMotionRestoreSpeed:
     m_OverrideState: 0
     m_Value: 0.5
@@ -195,35 +195,35 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   tonemap:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   tonemapMaxInputBrightness:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1000
   tonemapExposurePre:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   tonemapBrightnessPost:
-    m_OverrideState: 0
-    m_Value: 1
-  saturate:
-    m_OverrideState: 0
-    m_Value: 1
-  brightness:
     m_OverrideState: 1
+    m_Value: 1.4
+  saturate:
+    m_OverrideState: 1
+    m_Value: 2
+  brightness:
+    m_OverrideState: 0
     m_Value: 1.05
   contrast:
     m_OverrideState: 1
-    m_Value: 1.02
+    m_Value: 1.1
   daltonize:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   sepia:
     m_OverrideState: 0
     m_Value: 0
   tintColor:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 0}
+    m_Value: {r: 0.6556604, g: 1, b: 0.76076764, a: 1}
   colorTemp:
     m_OverrideState: 0
     m_Value: 12667
@@ -241,10 +241,10 @@ MonoBehaviour:
     m_Value: {fileID: 0}
     dimension: 1
   bloomIntensity:
-    m_OverrideState: 1
-    m_Value: 0.1
+    m_OverrideState: 0
+    m_Value: 0.01
   bloomThreshold:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.5
   bloomConservativeThreshold:
     m_OverrideState: 0
@@ -383,17 +383,17 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   sunFlaresIntensity:
-    m_OverrideState: 1
-    m_Value: 0.5
+    m_OverrideState: 0
+    m_Value: 0.905
   sunFlaresTint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   sunFlaresSolarWindSpeed:
     m_OverrideState: 0
-    m_Value: 0.915
+    m_Value: 0.01
   sunFlaresRotationDeadZone:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1
   sunFlaresDownsampling:
     m_OverrideState: 0
     m_Value: 1
@@ -497,7 +497,7 @@ MonoBehaviour:
     m_Value: 0.01
   lensDirtIntensity:
     m_OverrideState: 0
-    m_Value: 5.07
+    m_Value: 2.78
   lensDirtThreshold:
     m_OverrideState: 0
     m_Value: 0.5
@@ -521,10 +521,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   depthOfField:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   depthOfFieldFocusMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   depthOfFieldAutofocusMinDistance:
     m_OverrideState: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   depthOfFieldAutofocusLayerMask:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       serializedVersion: 2
       m_Bits: 4294967295
@@ -553,13 +553,13 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 10
   depthOfFieldCameraSettings:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   depthOfFieldFocalLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.005
   depthOfFieldAperture:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2.8
   depthOfFieldFocalLengthReal:
     m_OverrideState: 0
@@ -571,8 +571,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 24
   depthOfFieldFocusSpeed:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 5
   depthOfFieldTransparentSupport:
     m_OverrideState: 0
     m_Value: 0
@@ -659,10 +659,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.15
   vignettingOuterRing:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.325
   vignettingInnerRing:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.925
   vignettingFade:
     m_OverrideState: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 9
   ditherIntensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.005
   frame:
     m_OverrideState: 0
