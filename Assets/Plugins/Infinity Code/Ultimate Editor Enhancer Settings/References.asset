@@ -434,16 +434,20 @@ MonoBehaviour:
     rootOnly: 0
     recursive: 1
   _sceneHistory:
-  - name: DialogueEditorExample
-    path: Assets/Package/DialogueEditor/Example/DialogueEditorExample.unity
+  - name: DemoScene
+    path: Assets/Package/BOKI/LowPolyNature/Scenes/DemoScene.unity
   - name: MainScene
     path: Assets/Scenes/MainScene.unity
+  - name: Demo_Scene
+    path: Assets/Scenes/Demo_Scene.unity
+  - name: SampleScene
+    path: Assets/Scenes/SampleScene.unity
+  - name: DialogueEditorExample
+    path: Assets/Package/DialogueEditor/Example/DialogueEditorExample.unity
   - name: Demo
     path: Assets/Package/Low Poly Fire/Scenes/Demo.unity
   - name: Demo
     path: Assets/Simple FX Kit/Scenes/Demo.unity
-  - name: Demo_Scene
-    path: Assets/Scenes/Demo_Scene.unity
   - name: Example-Scene-01
     path: Assets/Bitgem/StylisedWater/URP/Examples/Example-Scene-01.unity
   - name: DemoScene

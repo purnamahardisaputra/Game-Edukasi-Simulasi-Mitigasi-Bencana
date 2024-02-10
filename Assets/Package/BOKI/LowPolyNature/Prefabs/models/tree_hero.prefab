@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3185447028110058621}
   - component: {fileID: 1989219551968881624}
   - component: {fileID: 4359440378522050322}
-  - component: {fileID: -1107210689656019492}
+  - component: {fileID: 6365739730355150531}
   m_Layer: 0
   m_Name: tree_hero
   m_TagString: Untagged
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-1107210689656019492
-MeshCollider:
+--- !u!136 &6365739730355150531
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -103,7 +103,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5151188051618064453, guid: efe1ff1cc19889a4593a70694d080451, type: 3}
+  serializedVersion: 2
+  m_Radius: 3
+  m_Height: 25.152565
+  m_Direction: 1
+  m_Center: {x: 0, y: 10, z: 0}
