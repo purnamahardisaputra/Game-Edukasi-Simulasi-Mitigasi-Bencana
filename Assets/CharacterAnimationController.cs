@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class CharacterAnimationController : MonoBehaviour
@@ -33,7 +31,17 @@ public class CharacterAnimationController : MonoBehaviour
         {
             animator.SetFloat("Speed", 0f);
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("NPC"))
+        {
+            Vector3 direction = other.transform.position - transform.position;
 
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime);
+        }
     }
 }
