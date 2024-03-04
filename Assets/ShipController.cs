@@ -10,7 +10,17 @@ namespace Skripsi.Ship.MovementContoller
         public float rotationSpeed = 100.0f;
         public bool IsRideable = false;
         [SerializeField] private GameObject _fanShip;
-        
+
+        public static ShipController Instance;
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+        }
+
         private void Update()
         {
             if (IsRideable)
@@ -19,10 +29,11 @@ namespace Skripsi.Ship.MovementContoller
             }
             else
             {
-                fanRotation(rotationSpeed, Time.deltaTime);
+                FanRotation(rotationSpeed, Time.deltaTime);
             }
         }
 
+        #region Movement Ship Controller
         void MovementShip()
         {
             // using arrow keys
@@ -34,13 +45,14 @@ namespace Skripsi.Ship.MovementContoller
             if (translation != 0)
             {
                 transform.Rotate(0, rotation, 0);
-                fanRotation(rotationSpeed * rotationSpeed, Time.deltaTime);
+                FanRotation(rotationSpeed * rotationSpeed, Time.deltaTime);
             }
         }
 
-        void fanRotation(float speedFan, float time)
+        void FanRotation(float speedFan, float time)
         {
             _fanShip.transform.Rotate(0, 0, speedFan * time);
         }
+        #endregion
     }
 }

@@ -16,6 +16,11 @@ namespace KinematicCharacterController.Examples
         private const string MouseScrollInput = "Mouse ScrollWheel";
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
+        private PlayerController _player;
+        private void Awake()
+        {
+            _player = FindAnyObjectByType<PlayerController>();
+        }
 
         private void Start()
         {
@@ -31,11 +36,6 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-
             HandleCharacterInput();
         }
 
@@ -91,7 +91,13 @@ namespace KinematicCharacterController.Examples
             characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                CharacterAnimationController.Instance.animator.Play("Jump");
+                PlayerController.Instance.animator.Play("Jump");
+                _player.character.transform.position += new Vector3(0, 1, 0);
+            }
+
+            if(Input.GetKeyUp(KeyCode.Space))
+            {
+                _player.character.transform.position += new Vector3(0, -1, 0);
             }
             
             // Apply inputs to character
