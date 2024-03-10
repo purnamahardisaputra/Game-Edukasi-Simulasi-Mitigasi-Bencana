@@ -1,6 +1,6 @@
+using DialogueEditor;
 using System.Collections;
 using UnityEngine;
-using static Beautify.Universal.Beautify;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,14 +35,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetFloat("Speed", 0f);
-        }
-    }
-
-    private void SetInputPlayer()
-    {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-
         }
     }
 

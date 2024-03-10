@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class NPCControllers : MonoBehaviour
 {
-    [SerializeField] 
-    private NPCConversation _npcConversation;
+    public NPCConversation _npcConversation;
     
     [SerializeField] 
     private GameObject _canvasTalkToNPC;

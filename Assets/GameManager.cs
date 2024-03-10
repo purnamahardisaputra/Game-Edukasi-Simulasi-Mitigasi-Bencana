@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public TMP_Text QuestText;
+    public GameObject ArrowDirection;
+    [SerializeField]
+    private GameState _gameState;
+    [SerializeField]
+    private QuestState _questState;
+    [SerializeField]
+    private SettingsFrameRate _settingsFrameRate;
+
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
-    private GameState _gameState;
-    private QuestState _questState;
-    public GameObject ArrowDirection;
-    public TMP_Text QuestText;
-
 
     private void Awake()
     {
@@ -30,29 +34,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Application.targetFrameRate = 60;
     }
 
     private void Start()
     {
-        switch (PlayerPrefs.GetInt("QuestGame"))
-        {
-            case 0:
-                SetFirstGame();
-                break;
-            case 1:
-                _questState = QuestState.QSIntro;
-                break;
-            case 2:
-                _questState = QuestState.QSDBencanaAlamBanjir;
-                break;
-            case 3:
-                _questState = QuestState.QSDBencanaAlamTanahLongsor;
-                break;
-
-            default:
-                PlayerPrefs.SetInt("QuestGame", 0);
-                break;
-        }
+        SetProgressPlayer();
     }
 
     [System.Obsolete]
@@ -67,45 +55,12 @@ public class GameManager : MonoBehaviour
     [System.Obsolete]
     private void Update()
     {
-
+        // Input Player
         GetSetInputPlayer();
 
-        // GAME STATE
-        switch (_gameState)
-        {
-            case GameState.Playing:
-                break;
-            case GameState.QuestDone:
-                ArrowDirection.SetActive(false);
-                QuestText.gameObject.SetActive(false);
-                break;
-            case GameState.Paused:
-                break;
-        }
-
-        // QUEST STATE
-        switch (_questState)
-        {
-            case QuestState.QSIntro:
-                SetFirstGame();
-                break;
-            case QuestState.QSDBencanaAlamBanjir:
-                break;
-            case QuestState.QSDBencanaAlamTanahLongsor:
-                break;
-            case QuestState.QSDBencanaKebakaranHutan:
-                break;
-            case QuestState.QSSimulasiBencanaAlamBanjir:
-                break;
-            case QuestState.QSSimulasiBencanaAlamTanahLongsor:
-                break;
-            case QuestState.QSSimulasiBencanaKebakaranHutan:
-                break;
-            case QuestState.QSGoodEndings:
-                break;
-            case QuestState.QSBadEndings:
-                break;
-        }
+        // Enum
+        EnumGameState(_gameState);
+        EnumQuestState(_questState);
     }
 
     [System.Obsolete]
@@ -144,7 +99,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Arrow Direction
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             if (ArrowDirection.active)
             {
@@ -159,6 +114,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
 
     private void SetFirstGame()
     {
@@ -184,7 +140,102 @@ public class GameManager : MonoBehaviour
         _questState = state;
     }
 
+    private void SetProgressPlayer()
+    {
+        switch (PlayerPrefs.GetInt("QuestGame"))
+        {
+            case 0:
+                SetFirstGame();
+                break;
+            case 1:
+                _questState = QuestState.QSIntro;
+                break;
+            case 2:
+                _questState = QuestState.QSDBencanaAlamBanjir;
+                break;
+            case 3:
+                _questState = QuestState.QSDBencanaAlamTanahLongsor;
+                break;
+
+            default:
+                PlayerPrefs.SetInt("QuestGame", 0);
+                break;
+        }
+    }
+
+    private void EnumQuestState(QuestState questState)
+    {
+        // QUEST STATE
+        switch (questState)
+        {
+            case QuestState.QSIntro:
+                SetFirstGame();
+                break;
+            case QuestState.QSDBencanaAlamBanjir:
+                break;
+            case QuestState.QSDBencanaAlamTanahLongsor:
+                break;
+            case QuestState.QSDBencanaKebakaranHutan:
+                break;
+            case QuestState.QSSimulasiBencanaAlamBanjir:
+                break;
+            case QuestState.QSSimulasiBencanaAlamTanahLongsor:
+                break;
+            case QuestState.QSSimulasiBencanaKebakaranHutan:
+                break;
+            case QuestState.QSGoodEndings:
+                break;
+            case QuestState.QSBadEndings:
+                break;
+        }
+    }
+
+    private void EnumGameState(GameState gameState)
+    {
+        // GAME STATE
+        switch (gameState)
+        {
+            case GameState.Playing:
+                break;
+            case GameState.QuestDone:
+                break;
+            case GameState.Paused:
+                break;
+        }
+    }
+
+    private void EnumFrameRate(SettingsFrameRate settingsFrameRate)
+    {
+        switch (settingsFrameRate)
+        {
+            case SettingsFrameRate.FrameRate30:
+                Application.targetFrameRate = 30;
+                break;
+            case SettingsFrameRate.FrameRate60:
+                Application.targetFrameRate = 60;
+                break;
+            case SettingsFrameRate.FrameRate120:
+                Application.targetFrameRate = 120;
+                break;
+            case SettingsFrameRate.FrameRate144:
+                Application.targetFrameRate = 144;
+                break;
+            case SettingsFrameRate.FrameRate240:
+                Application.targetFrameRate = 240;
+                break;
+        }
+    }
+
     #region Enum
+    public enum SettingsFrameRate
+    {
+        FrameRate30 = 30,
+        FrameRate60 = 60,
+        FrameRate120 = 120,
+        FrameRate144 = 144,
+        FrameRate240 = 240
+    }
+
     public enum GameState
     {
         Playing,
